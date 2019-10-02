@@ -4,7 +4,7 @@ const ap = new APlayer({
     audio:[{
         name: '初めてのデート',
         artist: 'SimorE',
-        url: 'http://music.163.com/song/media/outer/url?id=35451104.mp3',
-        cover: '/source/images/cover.jpg',
+        url: 'http://music.163.com/song/media/outer/url?id=475774775.mp3',
+        cover: '/images/cover.jpg',
     }]
 });

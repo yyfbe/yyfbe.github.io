@@ -232,6 +232,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://medlar.me/2019/10/20/交流会-second/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Silas">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/author.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Silas'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/20/交流会-second/" itemprop="url">交流会-second</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-20T16:18:22+08:00">
+                2019-10-20
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-10-20T16:18:55+08:00">
+                2019-10-20
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="9月下"><a href="#9月下" class="headerlink" title="9月下"></a>9月下</h3><hr>
+<blockquote>
+<ol>
+<li>看了看《Android开发艺术探索》</li>
+<li>因为修锅去了解了下一些第三方库的源码</li>
+<li>突发奇想，搭了个服务器</li>
+</ol>
+</blockquote>
+<p><strong>越来越喜欢</strong>Linux</p>
+<h4 id="《Android开发艺术探索》"><a href="#《Android开发艺术探索》" class="headerlink" title="《Android开发艺术探索》"></a>《Android开发艺术探索》</h4><p>还没看完，其实才看了点点，几天没看又忘完了。</p>
+<p>打算写个这本书的笔记博客，边看边写吧。</p>
+<h5 id="IPC（Inter-Process-Communication）机制"><a href="#IPC（Inter-Process-Communication）机制" class="headerlink" title="IPC（Inter-Process Communication）机制"></a>IPC（Inter-Process Communication）机制</h5><ul>
+<li>Bundle: 在Bundle中附加数据并通过Intent传输</li>
+<li>文件共享: 两个进程通过读写一个文件来交换数据</li>
+<li>AIDL: Android用来执行进程间通讯最主要的方式之一</li>
+<li>Messenger: 基于消息的进程间通信</li>
+<li>ContentProvider: 专门用于不同应用间的数据共享</li>
+<li>Socket: 使用TCP和UDP协议进行网络通信</li>
+</ul>
+<hr>
+<h5 id="View工作原理"><a href="#View工作原理" class="headerlink" title="View工作原理"></a>View工作原理</h5><ul>
+<li>ViewRoot :连接WindowManager和DecorView的纽带</li>
+<li>DecorView :顶级View</li>
+<li>MeasureSpec :代表一个32位int值，高2位代表SpecMode，低30位代表SpecSize</li>
+<li>一般view :<u>父容器在自己的MeasureSpec和子View的LayoutParams的共同作用下生成子View的MeasureSpec，然后子View在MeasureSpec约束下进行自己的测量。</u></li>
+<li>measure过程 :调用onMeasure方法</li>
+</ul>
+<p>….</p>
+<hr>
+<h4 id="某些第三方库的源码-其他大佬讲解的很多"><a href="#某些第三方库的源码-其他大佬讲解的很多" class="headerlink" title="某些第三方库的源码(其他大佬讲解的很多)"></a>某些第三方库的源码(其他大佬讲解的很多)</h4><p>之前用retrofit也没深究，就知道怎么用，然后修锅的时候，json解析出了问题，就回去从bean类到网络请求返回结果看下来。</p>
+<ul>
+<li>Retrofit（注解，动态代理，数据转换，切换线程)</li>
+<li>Gson（InstanceCreator接口，这里如果没有传自己的InstanceCreator实现的话，就会默认调用newDefaultConstructor方法，如果Bean类没有默认构造器就会导致所创建的对象属性不会初始化，就是这里导致的有默认值的属性竟然解析之后成了null）</li>
+</ul>
+<p>….</p>
+<hr>
+<h4 id="嫖了阿里云的学生优惠，搭了一个服务器"><a href="#嫖了阿里云的学生优惠，搭了一个服务器" class="headerlink" title="嫖了阿里云的学生优惠，搭了一个服务器"></a>嫖了阿里云的学生优惠，搭了一个服务器</h4><hr>
+<p>mysql，tomcat，踩了几天。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://medlar.me/2019/10/02/交流会-first/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -550,7 +719,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

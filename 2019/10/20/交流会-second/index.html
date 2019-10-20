@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="9月下   看了看《Android开发艺术探索》 因为修锅去了解了下一些第三方库的源码 突发奇想，搭了个服务器   越来越喜欢Linux 《Android开发艺术探索》还没看完，其实才看了点点，几天没看又忘完了。 打算写个这本书的笔记博客，边看边写吧。 IPC（Inter-Process Communication）机制 Bundle: 在Bundle中附加数据并通过Intent传输 文件共享:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="交流会-second">
+<meta property="og:url" content="http://medlar.me/2019/10/20/交流会-second/index.html">
+<meta property="og:site_name" content="Silas&#39;Blog">
+<meta property="og:description" content="9月下   看了看《Android开发艺术探索》 因为修锅去了解了下一些第三方库的源码 突发奇想，搭了个服务器   越来越喜欢Linux 《Android开发艺术探索》还没看完，其实才看了点点，几天没看又忘完了。 打算写个这本书的笔记博客，边看边写吧。 IPC（Inter-Process Communication）机制 Bundle: 在Bundle中附加数据并通过Intent传输 文件共享:">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-20T08:18:55.620Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="交流会-second">
+<meta name="twitter:description" content="9月下   看了看《Android开发艺术探索》 因为修锅去了解了下一些第三方库的源码 突发奇想，搭了个服务器   越来越喜欢Linux 《Android开发艺术探索》还没看完，其实才看了点点，几天没看又忘完了。 打算写个这本书的笔记博客，边看边写吧。 IPC（Inter-Process Communication）机制 Bundle: 在Bundle中附加数据并通过Intent传输 文件共享:">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://medlar.me/2019/10/20/交流会-second/">
+
+
+
+
+
+  <title>交流会-second | Silas'Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Silas'Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">菜鸡的日常</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://medlar.me/2019/10/20/交流会-second/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Silas">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/author.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Silas'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">交流会-second</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-20T16:18:22+08:00">
+                2019-10-20
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-10-20T16:18:55+08:00">
+                2019-10-20
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="9月下"><a href="#9月下" class="headerlink" title="9月下"></a>9月下</h3><hr>
+<blockquote>
+<ol>
+<li>看了看《Android开发艺术探索》</li>
+<li>因为修锅去了解了下一些第三方库的源码</li>
+<li>突发奇想，搭了个服务器</li>
+</ol>
+</blockquote>
+<p><strong>越来越喜欢</strong>Linux</p>
+<h4 id="《Android开发艺术探索》"><a href="#《Android开发艺术探索》" class="headerlink" title="《Android开发艺术探索》"></a>《Android开发艺术探索》</h4><p>还没看完，其实才看了点点，几天没看又忘完了。</p>
+<p>打算写个这本书的笔记博客，边看边写吧。</p>
+<h5 id="IPC（Inter-Process-Communication）机制"><a href="#IPC（Inter-Process-Communication）机制" class="headerlink" title="IPC（Inter-Process Communication）机制"></a>IPC（Inter-Process Communication）机制</h5><ul>
+<li>Bundle: 在Bundle中附加数据并通过Intent传输</li>
+<li>文件共享: 两个进程通过读写一个文件来交换数据</li>
+<li>AIDL: Android用来执行进程间通讯最主要的方式之一</li>
+<li>Messenger: 基于消息的进程间通信</li>
+<li>ContentProvider: 专门用于不同应用间的数据共享</li>
+<li>Socket: 使用TCP和UDP协议进行网络通信</li>
+</ul>
+<hr>
+<h5 id="View工作原理"><a href="#View工作原理" class="headerlink" title="View工作原理"></a>View工作原理</h5><ul>
+<li>ViewRoot :连接WindowManager和DecorView的纽带</li>
+<li>DecorView :顶级View</li>
+<li>MeasureSpec :代表一个32位int值，高2位代表SpecMode，低30位代表SpecSize</li>
+<li>一般view :<u>父容器在自己的MeasureSpec和子View的LayoutParams的共同作用下生成子View的MeasureSpec，然后子View在MeasureSpec约束下进行自己的测量。</u></li>
+<li>measure过程 :调用onMeasure方法</li>
+</ul>
+<p>….</p>
+<hr>
+<h4 id="某些第三方库的源码-其他大佬讲解的很多"><a href="#某些第三方库的源码-其他大佬讲解的很多" class="headerlink" title="某些第三方库的源码(其他大佬讲解的很多)"></a>某些第三方库的源码(其他大佬讲解的很多)</h4><p>之前用retrofit也没深究，就知道怎么用，然后修锅的时候，json解析出了问题，就回去从bean类到网络请求返回结果看下来。</p>
+<ul>
+<li>Retrofit（注解，动态代理，数据转换，切换线程)</li>
+<li>Gson（InstanceCreator接口，这里如果没有传自己的InstanceCreator实现的话，就会默认调用newDefaultConstructor方法，如果Bean类没有默认构造器就会导致所创建的对象属性不会初始化，就是这里导致的有默认值的属性竟然解析之后成了null）</li>
+</ul>
+<p>….</p>
+<hr>
+<h4 id="嫖了阿里云的学生优惠，搭了一个服务器"><a href="#嫖了阿里云的学生优惠，搭了一个服务器" class="headerlink" title="嫖了阿里云的学生优惠，搭了一个服务器"></a>嫖了阿里云的学生优惠，搭了一个服务器</h4><hr>
+<p>mysql，tomcat，踩了几天。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/02/交流会-first/" rel="next" title="交流会-first">
+                <i class="fa fa-chevron-left"></i> 交流会-first
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="Silas">
+            
+              <p class="site-author-name" itemprop="name">Silas</p>
+              <p class="site-description motion-element" itemprop="description">life is tough, but she is sweet</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yyfbe" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="silasyyfbe@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#9月下"><span class="nav-number">1.</span> <span class="nav-text">9月下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#《Android开发艺术探索》"><span class="nav-number">1.1.</span> <span class="nav-text">《Android开发艺术探索》</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#IPC（Inter-Process-Communication）机制"><span class="nav-number">1.1.1.</span> <span class="nav-text">IPC（Inter-Process Communication）机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#View工作原理"><span class="nav-number">1.1.2.</span> <span class="nav-text">View工作原理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#某些第三方库的源码-其他大佬讲解的很多"><span class="nav-number">1.2.</span> <span class="nav-text">某些第三方库的源码(其他大佬讲解的很多)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#嫖了阿里云的学生优惠，搭了一个服务器"><span class="nav-number">1.3.</span> <span class="nav-text">嫖了阿里云的学生优惠，搭了一个服务器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Silas</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="10月下   java的正则表达式简单用法 java的jvm简单了解   java的正则表达式 正则表达式定义了字符串的模式。  正则表达式可以用来搜索、编辑或处理文本。   正则表达式在不同语言或者场景中语法不同。 在java中可以利用正则表达式来判断，分割字符串，替换字符串内容，获取字符串等等。 eg: 12String str = &quot;Life is tough , but she is sw">
+<meta property="og:type" content="article">
+<meta property="og:title" content="交流会-fourth">
+<meta property="og:url" content="http://medlar.me/2019/11/03/交流会-fourth/index.html">
+<meta property="og:site_name" content="Silas&#39;Blog">
+<meta property="og:description" content="10月下   java的正则表达式简单用法 java的jvm简单了解   java的正则表达式 正则表达式定义了字符串的模式。  正则表达式可以用来搜索、编辑或处理文本。   正则表达式在不同语言或者场景中语法不同。 在java中可以利用正则表达式来判断，分割字符串，替换字符串内容，获取字符串等等。 eg: 12String str = &quot;Life is tough , but she is sw">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-03T10:24:55.301Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="交流会-fourth">
+<meta name="twitter:description" content="10月下   java的正则表达式简单用法 java的jvm简单了解   java的正则表达式 正则表达式定义了字符串的模式。  正则表达式可以用来搜索、编辑或处理文本。   正则表达式在不同语言或者场景中语法不同。 在java中可以利用正则表达式来判断，分割字符串，替换字符串内容，获取字符串等等。 eg: 12String str = &quot;Life is tough , but she is sw">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://medlar.me/2019/11/03/交流会-fourth/">
+
+
+
+
+
+  <title>交流会-fourth | Silas'Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Silas'Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">菜鸡的日常</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://medlar.me/2019/11/03/交流会-fourth/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Silas">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/author.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Silas'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">交流会-fourth</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-03T18:24:23+08:00">
+                2019-11-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-03T18:24:55+08:00">
+                2019-11-03
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="10月下"><a href="#10月下" class="headerlink" title="10月下"></a>10月下</h3><hr>
+<blockquote>
+<ul>
+<li>java的正则表达式简单用法</li>
+<li>java的jvm简单了解</li>
+</ul>
+</blockquote>
+<h4 id="java的正则表达式"><a href="#java的正则表达式" class="headerlink" title="java的正则表达式"></a>java的正则表达式</h4><ul>
+<li><p>正则表达式定义了字符串的模式。</p>
+</li>
+<li><p>正则表达式可以用来搜索、编辑或处理文本。</p>
+</li>
+</ul>
+<p>正则表达式在不同语言或者场景中语法不同。</p>
+<p>在java中可以利用正则表达式来<code>判断</code>，<code>分割字符串</code>，<code>替换字符串内容</code>，<code>获取字符串</code>等等。</p>
+<p>eg:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"Life is tough , but she is sweet ."</span>;</span><br><span class="line">String regex = <span class="string">"i\\w\\s\\b"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>regex这个正则表达式的意思就是，从字母i开始，后面接着一个字母，然后以空格结尾的字符串。可以看到is 满足条件，而Life因为不满足就不满足。</p>
+<h5 id="java中基本语法"><a href="#java中基本语法" class="headerlink" title="java中基本语法"></a>java中基本语法</h5><p>可以发现一个正则表达式可以包含</p>
+<ul>
+<li>字符</li>
+<li>各种转义字符，比如\w，\s等</li>
+<li>字符类：例如[abc]，[a-z]，[0-9]等</li>
+<li>^行的开头</li>
+<li>$行的结尾</li>
+<li>x\b单词以x结尾</li>
+<li>数量词：</li>
+<li>? 一次或一次也没有</li>
+<li>*零次或多次</li>
+<li>+一次或多次</li>
+<li>{n}n次</li>
+<li>{n,}至少 n次</li>
+<li>{n,m}至少n次，但不超过m次</li>
+<li>通配符</li>
+<li>\d：任意数字</li>
+<li>\s：任意空白符号（制表、换行、空格、换页、回车等）</li>
+<li>\w：任意单词字符（0-9，26个英文字母）</li>
+<li>\D：非数字</li>
+<li>\S：非空白符</li>
+<li>\W：非单词字符</li>
+<li>\b：单词边界</li>
+<li>\B：非单词边界</li>
+</ul>
+<p>……</p>
+<h5 id="相关博客"><a href="#相关博客" class="headerlink" title="相关博客"></a>相关博客</h5><p><a href="https://blog.csdn.net/Lirx_Tech/article/details/51720266" target="_blank" rel="noopener">网上的大佬语法详解</a></p>
+<p><a href="https://blog.csdn.net/weixin_44259720/article/details/88179885" target="_blank" rel="noopener">常用表达式</a></p>
+<h5 id="在java中的API"><a href="#在java中的API" class="headerlink" title="在java中的API"></a>在java中的API</h5><ul>
+<li>Pattern类</li>
+<li>Matcher类</li>
+</ul>
+<h5 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h5><p>比如现在要求用户输入账号，而账号的要求是字母开头，其他可以是数字或者字母，允许下划线，9位到12位</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"A12345678"</span>;</span><br><span class="line">String regex = <span class="string">"^\\w[0-9a-zA-Z_]&#123;8,11&#125;$"</span>;</span><br><span class="line">Pattern pattern = Pattern.compile(regex);</span><br><span class="line">Matcher matcher = pattern.matcher(str);</span><br><span class="line">System.out.println(<span class="string">"账号格式"</span>+matcher.matches());</span><br></pre></td></tr></table></figure>
+
+<p>或者<code>str.matches(regex);</code></p>
+<p>分割</p>
+<p>比如现在需要把<code>Life is tough , but she is sweet .</code>这句话用is和符号分割。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"Life is tough , but she is sweet ."</span>;</span><br><span class="line">String regex = <span class="string">"is|,|\\."</span>; <span class="comment">//.需要转义</span></span><br><span class="line"><span class="keyword">for</span> (String a : str.split(regex))</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h5><p>比如替换<code>aaa{bbb}cccddd</code>中第一个大括号里面内容为BBB</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String str=<span class="string">"aaa&#123;无关内容&#125;cccddd"</span>;</span><br><span class="line">String regex = <span class="string">"\\&#123;([^&#125;])*&#125;"</span>;</span><br><span class="line">System.out.println(str.replaceFirst(regex,<span class="string">"&#123;BBB&#125;"</span>));</span><br></pre></td></tr></table></figure>
+
+<h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><ul>
+<li><code>matcher.find()</code></li>
+<li><code>matcher.group()</code></li>
+<li><code>matcher.group()</code></li>
+<li><code>matcher.groupCount()</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"aaa&#123;12&#125;ccc&#123;ddd&#125;eee"</span>;</span><br><span class="line"><span class="comment">//第一个拿括号里面的，第二个拿括号外面两个</span></span><br><span class="line">String regex = <span class="string">"(\\&#123;[^&#125;]*&#125;)([\\w]&#123;2&#125;)"</span>;</span><br><span class="line">Pattern pattern = Pattern.compile(regex);</span><br><span class="line">Matcher matcher = pattern.matcher(str);</span><br><span class="line"><span class="keyword">while</span> (matcher.find()) &#123;</span><br><span class="line">    System.out.println(matcher.group());   </span><br><span class="line">    <span class="comment">//打印()里面的东西  </span></span><br><span class="line">    <span class="comment">//所有匹配内容</span></span><br><span class="line">    System.out.println(<span class="string">"group="</span> + matcher.group(<span class="number">0</span>));  </span><br><span class="line">    <span class="comment">//第一个()的东西  </span></span><br><span class="line">    System.out.println(<span class="string">"group1="</span> + matcher.group(<span class="number">1</span>)); </span><br><span class="line">    <span class="comment">//第二个()的东西  </span></span><br><span class="line">    System.out.println(<span class="string">"group2="</span> + matcher.group(<span class="number">2</span>));&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java内存区域"><a href="#Java内存区域" class="headerlink" title="Java内存区域"></a>Java内存区域</h4><h5 id="运行时数据区域"><a href="#运行时数据区域" class="headerlink" title="运行时数据区域"></a>运行时数据区域</h5><ul>
+<li><p>程序技术器：当前线程所执行的字节码的信号显示器。</p>
+<blockquote>
+<p>线程私有</p>
+<p>如果线程执行的是一个Java方法，这个计数器记录的是正在执行的虚拟机字节码命令的地址；如果正在执行的是Native方法（Java调用非java代码的接口），则计数器值为空。</p>
+<p>唯一一个java虚拟机规范没有规定任何oom情况的区域</p>
+</blockquote>
+</li>
+<li><p>Java虚拟机栈</p>
+<blockquote>
+<p>线程私有，生命周期与线程相同</p>
+<p>描述的java方法执行的内存模型：每个方法执行的同时都会创建一个栈帧用于储存局部变量表，操作数栈，动态链接，方法出口等信息。</p>
+<p>每个方法从调用到执行完成的过程，就对应着一个栈帧在虚拟机栈中入栈到出栈的过程。</p>
+<p>线程请求的栈深度大于虚拟机所允许的深度：StackOverflowError异常</p>
+<p>扩展时无法申请到足够内存：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+<li><p>本地方法栈</p>
+<blockquote>
+<p>为虚拟机使用Native方法服务</p>
+</blockquote>
+</li>
+<li><p>Java堆</p>
+<blockquote>
+<p>线程共享</p>
+<p>用于存放对象实例</p>
+<p>垃圾收集器管理的主要区域</p>
+<p>堆中内存没有完成实例分配，堆无法扩展：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+<li><p>方法区</p>
+<blockquote>
+<p>线程共享</p>
+<p>存储已被虚拟机加载的类信息，常量，静态变量，即时编译器编译后的代码等数据</p>
+<p>方法区中没有满足内存分配需求，：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+<li><p>运行时常量池</p>
+<blockquote>
+<p>方法区的一部分，用于存放编译期生成的各种字面量和符号引用</p>
+<p>动态性，在运行期间也可能将新的常量放入池中</p>
+<p>同方法区，无法申请到内存也会：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+<li><p>直接内存</p>
+<blockquote>
+<p>存储在Java堆中的DirectByteBuffer 对象作为这块内存的引用进行操作</p>
+<p>直接内存申请空间耗费更高的性能，当频繁申请到一定量时尤为明显</p>
+<p>直接内存IO读写的性能要优于普通的堆内存，在多次读写操作的情况下差异明显</p>
+<p>区域总内存大于物理内存：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/20/交流会-third/" rel="next" title="交流会-third">
+                <i class="fa fa-chevron-left"></i> 交流会-third
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/author.png" alt="Silas">
+            
+              <p class="site-author-name" itemprop="name">Silas</p>
+              <p class="site-description motion-element" itemprop="description">life is tough, but she is sweet</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yyfbe" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="silasyyfbe@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#10月下"><span class="nav-number">1.</span> <span class="nav-text">10月下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#java的正则表达式"><span class="nav-number">1.1.</span> <span class="nav-text">java的正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#java中基本语法"><span class="nav-number">1.1.1.</span> <span class="nav-text">java中基本语法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#相关博客"><span class="nav-number">1.1.2.</span> <span class="nav-text">相关博客</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在java中的API"><span class="nav-number">1.1.3.</span> <span class="nav-text">在java中的API</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#匹配"><span class="nav-number">1.1.4.</span> <span class="nav-text">匹配</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#替换"><span class="nav-number">1.1.5.</span> <span class="nav-text">替换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分组"><span class="nav-number">1.1.6.</span> <span class="nav-text">分组</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java内存区域"><span class="nav-number">1.2.</span> <span class="nav-text">Java内存区域</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#运行时数据区域"><span class="nav-number">1.2.1.</span> <span class="nav-text">运行时数据区域</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Silas</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

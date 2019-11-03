@@ -232,6 +232,260 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://medlar.me/2019/11/03/交流会-fourth/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Silas">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/author.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Silas'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/03/交流会-fourth/" itemprop="url">交流会-fourth</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-03T18:24:23+08:00">
+                2019-11-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-03T18:24:55+08:00">
+                2019-11-03
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="10月下"><a href="#10月下" class="headerlink" title="10月下"></a>10月下</h3><hr>
+<blockquote>
+<ul>
+<li>java的正则表达式简单用法</li>
+<li>java的jvm简单了解</li>
+</ul>
+</blockquote>
+<h4 id="java的正则表达式"><a href="#java的正则表达式" class="headerlink" title="java的正则表达式"></a>java的正则表达式</h4><ul>
+<li><p>正则表达式定义了字符串的模式。</p>
+</li>
+<li><p>正则表达式可以用来搜索、编辑或处理文本。</p>
+</li>
+</ul>
+<p>正则表达式在不同语言或者场景中语法不同。</p>
+<p>在java中可以利用正则表达式来<code>判断</code>，<code>分割字符串</code>，<code>替换字符串内容</code>，<code>获取字符串</code>等等。</p>
+<p>eg:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"Life is tough , but she is sweet ."</span>;</span><br><span class="line">String regex = <span class="string">"i\\w\\s\\b"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>regex这个正则表达式的意思就是，从字母i开始，后面接着一个字母，然后以空格结尾的字符串。可以看到is 满足条件，而Life因为不满足就不满足。</p>
+<h5 id="java中基本语法"><a href="#java中基本语法" class="headerlink" title="java中基本语法"></a>java中基本语法</h5><p>可以发现一个正则表达式可以包含</p>
+<ul>
+<li>字符</li>
+<li>各种转义字符，比如\w，\s等</li>
+<li>字符类：例如[abc]，[a-z]，[0-9]等</li>
+<li>^行的开头</li>
+<li>$行的结尾</li>
+<li>x\b单词以x结尾</li>
+<li>数量词：</li>
+<li>? 一次或一次也没有</li>
+<li>*零次或多次</li>
+<li>+一次或多次</li>
+<li>{n}n次</li>
+<li>{n,}至少 n次</li>
+<li>{n,m}至少n次，但不超过m次</li>
+<li>通配符</li>
+<li>\d：任意数字</li>
+<li>\s：任意空白符号（制表、换行、空格、换页、回车等）</li>
+<li>\w：任意单词字符（0-9，26个英文字母）</li>
+<li>\D：非数字</li>
+<li>\S：非空白符</li>
+<li>\W：非单词字符</li>
+<li>\b：单词边界</li>
+<li>\B：非单词边界</li>
+</ul>
+<p>……</p>
+<h5 id="相关博客"><a href="#相关博客" class="headerlink" title="相关博客"></a>相关博客</h5><p><a href="https://blog.csdn.net/Lirx_Tech/article/details/51720266" target="_blank" rel="noopener">网上的大佬语法详解</a></p>
+<p><a href="https://blog.csdn.net/weixin_44259720/article/details/88179885" target="_blank" rel="noopener">常用表达式</a></p>
+<h5 id="在java中的API"><a href="#在java中的API" class="headerlink" title="在java中的API"></a>在java中的API</h5><ul>
+<li>Pattern类</li>
+<li>Matcher类</li>
+</ul>
+<h5 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h5><p>比如现在要求用户输入账号，而账号的要求是字母开头，其他可以是数字或者字母，允许下划线，9位到12位</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"A12345678"</span>;</span><br><span class="line">String regex = <span class="string">"^\\w[0-9a-zA-Z_]&#123;8,11&#125;$"</span>;</span><br><span class="line">Pattern pattern = Pattern.compile(regex);</span><br><span class="line">Matcher matcher = pattern.matcher(str);</span><br><span class="line">System.out.println(<span class="string">"账号格式"</span>+matcher.matches());</span><br></pre></td></tr></table></figure>
+
+<p>或者<code>str.matches(regex);</code></p>
+<p>分割</p>
+<p>比如现在需要把<code>Life is tough , but she is sweet .</code>这句话用is和符号分割。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"Life is tough , but she is sweet ."</span>;</span><br><span class="line">String regex = <span class="string">"is|,|\\."</span>; <span class="comment">//.需要转义</span></span><br><span class="line"><span class="keyword">for</span> (String a : str.split(regex))</span><br><span class="line">&#123;</span><br><span class="line">    System.out.println(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h5><p>比如替换<code>aaa{bbb}cccddd</code>中第一个大括号里面内容为BBB</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String str=<span class="string">"aaa&#123;无关内容&#125;cccddd"</span>;</span><br><span class="line">String regex = <span class="string">"\\&#123;([^&#125;])*&#125;"</span>;</span><br><span class="line">System.out.println(str.replaceFirst(regex,<span class="string">"&#123;BBB&#125;"</span>));</span><br></pre></td></tr></table></figure>
+
+<h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><ul>
+<li><code>matcher.find()</code></li>
+<li><code>matcher.group()</code></li>
+<li><code>matcher.group()</code></li>
+<li><code>matcher.groupCount()</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"aaa&#123;12&#125;ccc&#123;ddd&#125;eee"</span>;</span><br><span class="line"><span class="comment">//第一个拿括号里面的，第二个拿括号外面两个</span></span><br><span class="line">String regex = <span class="string">"(\\&#123;[^&#125;]*&#125;)([\\w]&#123;2&#125;)"</span>;</span><br><span class="line">Pattern pattern = Pattern.compile(regex);</span><br><span class="line">Matcher matcher = pattern.matcher(str);</span><br><span class="line"><span class="keyword">while</span> (matcher.find()) &#123;</span><br><span class="line">    System.out.println(matcher.group());   </span><br><span class="line">    <span class="comment">//打印()里面的东西  </span></span><br><span class="line">    <span class="comment">//所有匹配内容</span></span><br><span class="line">    System.out.println(<span class="string">"group="</span> + matcher.group(<span class="number">0</span>));  </span><br><span class="line">    <span class="comment">//第一个()的东西  </span></span><br><span class="line">    System.out.println(<span class="string">"group1="</span> + matcher.group(<span class="number">1</span>)); </span><br><span class="line">    <span class="comment">//第二个()的东西  </span></span><br><span class="line">    System.out.println(<span class="string">"group2="</span> + matcher.group(<span class="number">2</span>));&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java内存区域"><a href="#Java内存区域" class="headerlink" title="Java内存区域"></a>Java内存区域</h4><h5 id="运行时数据区域"><a href="#运行时数据区域" class="headerlink" title="运行时数据区域"></a>运行时数据区域</h5><ul>
+<li><p>程序技术器：当前线程所执行的字节码的信号显示器。</p>
+<blockquote>
+<p>线程私有</p>
+<p>如果线程执行的是一个Java方法，这个计数器记录的是正在执行的虚拟机字节码命令的地址；如果正在执行的是Native方法（Java调用非java代码的接口），则计数器值为空。</p>
+<p>唯一一个java虚拟机规范没有规定任何oom情况的区域</p>
+</blockquote>
+</li>
+<li><p>Java虚拟机栈</p>
+<blockquote>
+<p>线程私有，生命周期与线程相同</p>
+<p>描述的java方法执行的内存模型：每个方法执行的同时都会创建一个栈帧用于储存局部变量表，操作数栈，动态链接，方法出口等信息。</p>
+<p>每个方法从调用到执行完成的过程，就对应着一个栈帧在虚拟机栈中入栈到出栈的过程。</p>
+<p>线程请求的栈深度大于虚拟机所允许的深度：StackOverflowError异常</p>
+<p>扩展时无法申请到足够内存：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+<li><p>本地方法栈</p>
+<blockquote>
+<p>为虚拟机使用Native方法服务</p>
+</blockquote>
+</li>
+<li><p>Java堆</p>
+<blockquote>
+<p>线程共享</p>
+<p>用于存放对象实例</p>
+<p>垃圾收集器管理的主要区域</p>
+<p>堆中内存没有完成实例分配，堆无法扩展：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+<li><p>方法区</p>
+<blockquote>
+<p>线程共享</p>
+<p>存储已被虚拟机加载的类信息，常量，静态变量，即时编译器编译后的代码等数据</p>
+<p>方法区中没有满足内存分配需求，：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+<li><p>运行时常量池</p>
+<blockquote>
+<p>方法区的一部分，用于存放编译期生成的各种字面量和符号引用</p>
+<p>动态性，在运行期间也可能将新的常量放入池中</p>
+<p>同方法区，无法申请到内存也会：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+<li><p>直接内存</p>
+<blockquote>
+<p>存储在Java堆中的DirectByteBuffer 对象作为这块内存的引用进行操作</p>
+<p>直接内存申请空间耗费更高的性能，当频繁申请到一定量时尤为明显</p>
+<p>直接内存IO读写的性能要优于普通的堆内存，在多次读写操作的情况下差异明显</p>
+<p>区域总内存大于物理内存：OutOfMemoryError异常</p>
+</blockquote>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://medlar.me/2019/10/20/交流会-third/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -924,7 +1178,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
